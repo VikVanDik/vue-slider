@@ -16,10 +16,9 @@
         <button type="button" class="button-up">&uarr;</button>
         <button type="button" class="button-down">&darr;</button>
         <div class="images">
-          <img 
-          v-for="(game, index) in games" 
-          :src="game[counter].image" 
-          alt=""
+          <img
+          :src="games[counter].image"
+          :alt="game.title"
           >
           <div class="info">
             <h3>Marvel\'s Spiderman Miles Morales</h3>
