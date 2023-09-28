@@ -57,10 +57,8 @@ createApp ({
       this.counter = this.index
     },
 
-    
-    
     autoplayDown (){
-      setInterval(() => {this.nextButton();},1000);
+    setInterval (this.nextButton, 1000)
     },
 
     stopAutoplay (){
@@ -71,6 +69,6 @@ createApp ({
 
   mounted () {
     this.autoplayDown (),
-    this.stopAutoplay 
+    this.stopAutoplay
   }
 }) .mount('#app')
