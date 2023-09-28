@@ -37,6 +37,7 @@ createApp ({
   methods : {
     isActive : true,
     counter : 0,
+    
     nextButton (){
       counter++
     },
@@ -55,6 +56,5 @@ createApp ({
   },
 
   mounted () {
-    console.log(this.titles);
   }
 }) .mount('#app')
