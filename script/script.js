@@ -38,7 +38,7 @@ createApp ({
 
   methods : {
     isActive : true,
-    
+    // 4. Creare due funzioni che gestiscano i bottoni.
     nextButton (){
       this.counter++
       if (this.counter === this.games.length) {
@@ -52,6 +52,10 @@ createApp ({
         this.counter = this.games.length - 1
       }
     },
+
+    activeThumb () {
+      this.counter = this.index
+    }
 
   },
 

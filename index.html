@@ -32,6 +32,7 @@
           :src="games[index].image" 
           :alt="games.title"
           :class="(index === counter) ? 'active' : ''"
+          @click ="this.counter = index"
           >
           
         </div>
