@@ -13,7 +13,22 @@ createApp ({
 
   methods : {
     isActive : true,
-    counter : 0
+    counter : 0,
+    nextButton (){
+      counter++
+    },
+
+    prevButton (){
+      counter--
+    },
+
+    nextPrev () {
+      if (counter === this.imges.length) {
+        counter = 0
+      } else if (counter === 0) {
+        counter = this.images.length - 1
+      }
+    }
   },
 
   mounted () {
