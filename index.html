@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<!-- 1. Recuperare la versione bonus dei file del carousel. -->
+<!-- 1. Ricreare il markup e lo stile. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarouselBONUS</title>
+  <title>Carousel 3.0</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
+  <div id="app">
+
+    <div class="container">
+      <div class="wrapper">
+        <button type="button" class="button-up">&uarr;</button>
+        <button type="button" class="button-down">&darr;</button>
+        <div class="images">
+          <img v-for="img, index in imges" :src="img" alt=""
+          class="hide" :class = "{hide: isActive}">
+          <div class="info">
+            <h3>Marvel\'s Spiderman Miles Morales</h3>
+            <div class="info-text">Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.</div>
+          </div>
   
-  <div class="container">
-    <div class="wrapper">
-      <button type="button" class="button-up">&uarr;</button>
-      <button type="button" class="button-down">&darr;</button>
-      <div class="images">
-        <img src="./img/01.webp" alt="">
-        <div class="info">
-          <h3>Marvel\'s Spiderman Miles Morales</h3>
-          <div class="info-text">Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.</div>
         </div>
-
+        <div class="thumb-container">
+          <img src="/img/01.webp" alt="" class="item-mini">
+          <img src="/img/01.webp" alt="" class="item-mini">
+          <img src="/img/01.webp" alt="" class="item-mini">
+          <img src="/img/01.webp" alt="" class="item-mini">
+          <img src="/img/01.webp" alt="" class="item-mini">
+        </div>
+  
       </div>
-      <div class="thumb-container">
-        
-      </div>
-
+      <button type="button" class="button-reverse">Reverse Autoplay</button>
     </div>
-    <button type="button" class="button-reverse">Reverse Autoplay</button>
   </div>
   <script src="./script/script.js"></script>
 </body>
