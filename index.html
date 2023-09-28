@@ -13,25 +13,27 @@
 
     <div class="container">
       <div class="wrapper">
-        <button type="button" class="button-up">&uarr;</button>
-        <button type="button" class="button-down">&darr;</button>
+        <button type="button" class="button-up" @click = "prevButton ()">&uarr;</button>
+        <button type="button" class="button-down" @click = "nextButton ()">&darr;</button>
         <div class="images">
           <img
           :src="games[counter].image"
-          :alt="game.title"
+          :alt="games.title"
           >
           <div class="info">
-            <h3>Marvel\'s Spiderman Miles Morales</h3>
-            <div class="info-text">Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.</div>
+            <h3>{{games[counter].title}}</h3>
+            <div class="info-text">{{games[counter].text}}</div>
           </div>
   
         </div>
         <div class="thumb-container">
-          <img src="/img/01.webp" alt="" class="item-mini">
-          <img src="/img/01.webp" alt="" class="item-mini">
-          <img src="/img/01.webp" alt="" class="item-mini">
-          <img src="/img/01.webp" alt="" class="item-mini">
-          <img src="/img/01.webp" alt="" class="item-mini">
+          <img 
+          v-for = "(game, index) in games"
+          :src="games[index].image" 
+          :alt="games.title"
+          :class="(index === counter) ? 'active' : ''"
+          >
+          
         </div>
   
       </div>

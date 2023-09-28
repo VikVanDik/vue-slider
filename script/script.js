@@ -40,20 +40,19 @@ createApp ({
     isActive : true,
     
     nextButton (){
-      counter++
+      this.counter++
+      if (this.counter === this.games.length) {
+        this.counter = 0
+      }
     },
 
     prevButton (){
-      counter--
+      this.counter--
+      if (this.counter === -1) {
+        this.counter = this.games.length - 1
+      }
     },
 
-    nextPrev () {
-      if (counter === this.imges.length) {
-        counter = 0
-      } else if (counter === 0) {
-        counter = this.images.length - 1
-      }
-    }
   },
 
   mounted () {
