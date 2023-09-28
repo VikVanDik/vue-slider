@@ -13,6 +13,5 @@ createApp ({
   
   mounted () {
     console.log(this.titles);
-    console.log(isActive);
   }
 }) .mount('#app')
