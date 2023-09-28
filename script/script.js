@@ -55,10 +55,22 @@ createApp ({
 
     activeThumb () {
       this.counter = this.index
+    },
+
+    
+    
+    autoplayDown (){
+      setInterval(() => {this.nextButton();},1000);
+    },
+
+    stopAutoplay (){
+      clearInterval (this.autoplayDown)
     }
 
   },
 
   mounted () {
+    this.autoplayDown (),
+    this.stopAutoplay 
   }
 }) .mount('#app')
